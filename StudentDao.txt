@@ -25,7 +25,7 @@ public class StudentDao {
      * 
      * @param studentList: list student to save
      */
-    public void write(List<Student> studentList) {
+public void write(List<Student> studentList) {
         FileOutputStream fos = null;
         ObjectOutputStream oos = null;
         try {
@@ -75,17 +75,19 @@ public List<Student> read() {
             }
         }
     }
-/**
-     * close input stream
+ 
+    /**
+     * close output stream
      * 
-     * @param is: input stream
+     * @param os: output stream
      */
-    private void closeStream(InputStream is) {
-        if (is != null) {
+    private void closeStream(OutputStream os) {
+        if (os != null) {
             try {
-                is.close();
+                os.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
+}
