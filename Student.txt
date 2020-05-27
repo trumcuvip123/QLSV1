@@ -18,3 +18,8 @@ public class Student implements Serializable {
         this.address = address;
         this.gpa = gpa;
     }
+public int getId() {
+        return id;
+    }
+
+ 
