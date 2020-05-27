@@ -27,6 +27,16 @@ public class Main {
                 studentId = studentManager.inputId();
                 studentManager.edit(studentId);
                 break;
+            case "3":
+                studentId = studentManager.inputId();
+                studentManager.delete(studentId);
+                break;
+            case "4":
+                studentManager.sortStudentByGPA();
+                break;
+            case "5":
+                studentManager.sortStudentByName();
+                break;
             
             default:
                 System.out.println("invalid! please choose action in below menu:");
