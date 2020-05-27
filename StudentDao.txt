@@ -41,3 +41,23 @@ public class StudentDao {
             closeStream(oos);
         }
     }
+public List<Student> read() {
+        List<Student> studentList = new ArrayList<>();
+        FileInputStream fis = null;
+        ObjectInputStream ois = null;
+        try {
+            fis = new FileInputStream(new File(STUDENT_FILE_NAME));
+            ois = new ObjectInputStream(fis);
+            studentList = (List<Student>) ois.readObject();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            closeStream(fis);
+            closeStream(ois);
+        }
+        return studentList;
+    }
