@@ -37,7 +37,13 @@ public class Main {
             case "5":
                 studentManager.sortStudentByName();
                 break;
-            
+            case "6":
+                studentManager.show();
+                break;
+            case "0":
+                System.out.println("exited!");
+                exit = true;
+                break;
             default:
                 System.out.println("invalid! please choose action in below menu:");
                 break;
