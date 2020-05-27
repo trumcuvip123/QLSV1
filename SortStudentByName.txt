@@ -3,10 +3,9 @@ package vn.viettuts;
 import java.util.Comparator;
 
 public class SortStudentByName implements Comparator<Student> {
-nashdj
-jahas
+
     @Override
     public int compare(Student student1, Student student2) {
-aaaa
+
     } 
 } 
